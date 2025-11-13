@@ -1,9 +1,8 @@
+import { PlatformaticApplication, PlatformaticDatabaseConfig, PlatformaticDatabaseMixin } from "@platformatic/db";
+import { Entities, EntitiesHooks, SchemaGetters } from "./types/index.js";
 
-import { type FastifyInstance } from 'fastify'
-import { PlatformaticApplication, PlatformaticDatabaseConfig, PlatformaticDatabaseMixin, Entities } from '@platformatic/db'
-
-declare module 'fastify' {
+declare module "fastify" {
   interface FastifyInstance {
-    platformatic: PlatformaticApplication<PlatformaticDatabaseConfig> & PlatformaticDatabaseMixin<Entities>
+    platformatic: PlatformaticApplication<PlatformaticDatabaseConfig> & PlatformaticDatabaseMixin<Entities> & EntitiesHooks & SchemaGetters;
   }
 }
