@@ -1,0 +1,9 @@
+{
+  "name": "clear-wizard",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@platformatic/node": "^3.19.0"
+  },
+  "devDependencies": {}
+}
